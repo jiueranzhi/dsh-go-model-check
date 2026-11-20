@@ -1,0 +1,23 @@
+{
+  "name": "local-model-check",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "scripts": { "test": "node --test test/*.test.mjs" },
+  "dsh": { "bundle": { "patch": "./cordis.patch.yml" } },
+  "engines": { "dsh": ">=0.2.2-rc.1 <0.3.0-0" },
+  "dshGo": {
+    "v": 1,
+    "title": { "zh": "模型检测", "en": "Model check" },
+    "icon": "model",
+    "contributes": {
+      "composer.actions": [
+        { "id": "open-checker", "label": "模型检测", "icon": "model", "effect": { "type": "open", "page": "panel:checker" } }
+      ],
+      "panels": [
+        { "id": "checker", "title": "模型检测", "icon": "model", "placement": ["session.tab", "features"] }
+      ]
+    }
+  }
+}

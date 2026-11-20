@@ -1,0 +1,25 @@
+# Dependencies and package-manager caches
+node_modules/
+.pnpm-store/
+.npm/
+
+# Local secrets and runtime state: never publish host configuration
+.env
+.env.*
+!.env.example
+.credentials*
+credentials.*
+.dsh/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Logs, generated reports, temporary files and package archives
+*.log
+coverage/
+.cache/
+*.tmp
+*.tgz
+.DS_Store
+Thumbs.db
